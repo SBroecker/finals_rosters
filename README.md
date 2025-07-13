@@ -6,9 +6,24 @@ The final output of this code is `teams_per_year.csv`, which contains a row for 
 
 ## `scraping.ipynb`
 
-All the code is in here. The general flow of the code is:
+All the data collecting and processing code is in here. The general flow of the code is:
 
 1. Get the two teams in every NBA finals matchup from Basketball Reference.
 2. For every team in every finals, get all of the players from those teams.
 3. For every player for every team in every finals, get all of the teams they every played for.
 4. Aggregate all of the teams represented in every year of the finals.
+5. Find all of the past names of every current NBA team
+6. Merge the yearly results for every team with their past teams
+7. Apply some aggregations and formatting
+
+## `plots.ipynb`
+
+Code to visualize the totals for each team and the yearly appearances for each team.
+
+## Environment
+
+All code is run in a mamba environment created with the following command:
+
+```
+mamba create -n nba polars requests bs4 tqdm matplotlib plotnine ipykernel pyarrow -c conda-forge
+```
